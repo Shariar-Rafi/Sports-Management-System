@@ -34,9 +34,29 @@ def PlayerReg(request):
          return redirect('Player')
    return render(request, "PlayerReg.html")
 
+def Player(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        pass1 = request.POST.get('pass')
+        user = authenticate(request,username=username,password=pass1)
+
+        if user is not None:
+            login(request,user)
+            
+            return redirect('PlayerProfile')
+        
+        else:
+            messages.warning(request, 'Username or Password is incorrect')
+            return redirect('Player')
+      
+
+        
+    return render(request, "Player.html")
+
 
 def TermsOfService(request):
    return render (request,"TermsOfService.html")
+
 
 
 
