@@ -34,6 +34,19 @@ def PlayerReg(request):
          return redirect('Player')
    return render(request, "PlayerReg.html")
 
+@login_required(login_url='Player')
+def PlayerProfile(request):
+   user = request.user
+   context = {
+               "uname": user.username,
+               "email" : user.email,
+            }
+   return render (request,"PlayerProfile.html",context)
+
+
+def ChangePass(request):
+   return render (request,"ChangePass.html")
+
 def Player(request):
     if request.method == 'POST':
         username = request.POST.get('username')
