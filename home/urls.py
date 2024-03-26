@@ -9,6 +9,8 @@ urlpatterns =[
     path("PlayerReg",views.PlayerReg,name = 'PlayerReg'),
     path("TermsOfService",views.TermsOfService,name = 'TermsOfService'),
     path("logout",views.LogoutPage,name = 'logout'),
+    path("Player",views.Player,name = 'Player'),
+
 
 
 
