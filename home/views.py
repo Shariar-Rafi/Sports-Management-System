@@ -20,6 +20,18 @@ def LogoutPage(request):
 
 
 def PlayerReg(request):
+   if request.method == "POST":
+      uname = request.POST.get('uname')
+      email = request.POST.get('email')
+      pass1 = request.POST.get('pass1')
+      pass2 = request.POST.get('pass2')
+
+      if pass1!= pass2:
+         messages.warning(request, "Both passwords didn't match, please try again!")
+      else:
+         my_user = User.objects.create_user(uname,email,pass1)
+         my_user.save ()
+         return redirect('Player')
    return render(request, "PlayerReg.html")
 
 
