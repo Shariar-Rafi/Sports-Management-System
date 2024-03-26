@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Home {% endblock title %} 
+
+{% block body %}
+    <!-- Slider part -->
+    <div class="container-fluid px-0">
+      <br>
+      <br>
+
+      <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/static/header-bg.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Book Your Sports Arena Today</h1>
+                <p>“Champions keep playing until they get it right.” – Billie Jean King</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/static/basketball.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Choose Your Favourite Opponent</h1>
+                <p>“The only way to prove that you’re a good sport is to lose.” – Ernie</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/static/football.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Win or Lose</h1>
+                <p>Do not waste this opprtunity</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+    
+   
+
+    <!-- Thumbnail part -->
+    <br>
+    <br>
+      <h1 class="my-2 text-center" style="color:#ff8a16;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Developed By</h1>
+  
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">  
+            <img src="/static/1.jpg" class="d-block w-100" alt="...">
+            
+            <div class="card-body">
+              <p class="card-text">Md.Raduan Kabir</p>
+              <p class="card-text">20201045@uap-bd.edu</p>
+  
+              <div class="d-flex justify-content-between align-items-center">
+               
+                <small class="text-muted">Developer 1</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/2.png" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">Ali Ahasan</p>
+              <p class="card-text">20201042@uap-bd.edu</p>
+  
+              <div class="d-flex justify-content-between align-items-center">
+             
+                <small class="text-muted">Developer 2</small>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/3.jpg" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">Md.Monem Shariar Rafi</p>
+              <p class="card-text">20201058@uap-bd.edu</p>
+  
+              <div class="d-flex justify-content-between align-items-center">
+              
+                <small class="text-muted">Developer 3 </small>
+                </a>
+              </div>
+              <div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+      
+{% endblock body %}
