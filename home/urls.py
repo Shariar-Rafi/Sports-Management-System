@@ -10,9 +10,14 @@ urlpatterns =[
     path("TermsOfService",views.TermsOfService,name = 'TermsOfService'),
     path("logout",views.LogoutPage,name = 'logout'),
     path("Player",views.Player,name = 'Player'),
-
-
-
-
+    path("PlayerProfile",views.PlayerProfile,name = 'PlayerProfile'),
+    path(
+        'ChangePass/',
+        auth_views.PasswordChangeView.as_view(
+            template_name='regi/changePass.html',
+            success_url = '/PlayerProfile'
+        ),
+        name='ChangePass'
+    ),
 
 ]
